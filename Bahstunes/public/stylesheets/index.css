@@ -1,0 +1,98 @@
+.modal, .modal-title {
+	color:#000 !important;
+}
+.modal.level2{
+    z-index: 1044 !important;
+}
+.modal-backdrop.in.level2 {
+    z-index: 1043 !important;
+}
+
+.modal.level1 {
+    z-index: 1042 !important;
+}
+.modal-backdrop.in.level1 {
+    z-index: 1041 !important;
+}
+   
+ 
+/* carousel */ 
+.carousel-inner > .item > div, 
+.carousel-inner > .item > img,
+.carousel-inner > .item > a > img {
+    width: 70%;
+    margin: auto;
+}
+.slide-caption {
+	text-align:center;
+}
+
+
+.carousel-indicators{
+	height:105%;
+	bottom:0px; 
+}
+
+
+/*all */
+.center {
+	text-align:center;
+}
+.bold {
+	font-weight:bold;
+}
+
+
+
+
+/* Event List Table*/
+
+#content, #content .table th {
+	text-align:center;	
+}
+#content .table {
+	width:60%;
+	margin-left:20%;
+	margin-right:20%;
+}
+
+#content .table tr td:nth-child(1){
+	max-width:10%;
+}
+
+.table>tbody>tr>td, 
+.table>tbody>tr>th, 
+.table>tfoot>tr>td, 
+.table>tfoot>tr>th, 
+.table>thead>tr>td, 
+.table>thead>tr>th {
+	vertical-align:middle;
+}
+
+
+.table.tfixed {
+	margin-bottom:0px;
+	position:fixed;
+}
+
+#content .login {
+	color:blue;
+}
+
+#content .location {
+	color:green;
+}
+
+#content .date {
+	font-weight:bold;	
+}
+
+
+
+
+
+/*****************************/
+
+div#map_container div#map_canvas {
+    height: 400px !important;
+}

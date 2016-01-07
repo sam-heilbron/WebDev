@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+	<head>
+  		<% include ../partials/header.ejs %>
+	</head>
+
+	<body>
+		<% include ../partials/navigation.ejs %>
+		<table class="table table-hover table-border table-fixed">
+    			<tbody>
+    			
+		<% if(gSync == "T") { %>
+    				<tr class="usr"> 
+    					<td class=".col-md-6 .col-md-offset-3">
+    						Your Google account needed to be synced. You will now have full access to our site.  
+    					</td>
+    				</tr>
+		<% } %>
+		    		<tr class="usr">
+      					<td class="col-md-3">Name </td>
+        				<td class="col-md-3"><%= user.username %></td>
+					</tr>
+					<tr class = "usr">
+						<td class="col-md-3">Email </td>
+        				<td class="col-md-3"><%= user.emails[0].value %></td>
+        			</tr>
+						
+    			<tbody>
+			</table>
+			
+			<div>
+                            <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.js"></script>
+                            <h2> My Music Preferences </h2>
+                            <canvas id="myChart" width="400" height="400"></canvas>
+								
+                            <script>
+                                var c = $('#myChart');
+                                var ct = c.get(0).getContext('2d');
+                                var ctx = document.getElementById("myChart").getContext("2d");
+                                /*************************************************************************/
+
+                                var chartData = [];
+                                var genre1 = String("<%= genres[0].genre %>");
+                                var genre2 = String("<%= genres[1].genre %>");
+                                var genre3 = String("<%= genres[2].genre %>");
+                                var genre4 = String("<%= genres[3].genre %>");
+                                var genre5 = String("<%= genres[4].genre %>");
+                                var genre6 = String("<%= genres[5].genre %>");
+                                var genre7 = String("<%= genres[6].genre %>");
+                                chartData.push({
+                                    value: parseInt(<%= genres[0].count %>),
+                                    color: "#F7464A",
+                                    highlight: "#FF5A5E",
+                                    label: genre1
+                                }, {
+                                    value: <%= genres[1].count %>,
+                                    color: "#46BFBD",
+                                    highlight: "#5AD3D1",
+                                    label: genre2
+                                }, {
+                                    value: <%= genres[2].count %>,
+                                    color: "#FDB45C",
+                                    highlight: "#FFC870",
+                                    label: genre3
+                                }, {
+                                    value: <%= genres[3].count %>,
+                                    color: "#4D5360",
+                                    highlight: "#616774",
+                                    label: genre4
+                                }, {
+                                    value: <%= genres[4].count %>,
+                                    color: "#949FB1",
+                                    highlight: "#A8B3C5",
+                                    label: genre5
+                                }, {
+                                    value: <%= genres[5].count %>,
+                                    color: "#7CC265",
+                                    highlight: "#9DC291",
+                                    label: genre6
+                                }, {
+                                    value: <%= genres[6].count %>,
+                                    color: "#905AA3",
+                                    highlight: "#A577B5",
+                                    label: genre7
+                                });
+
+                                var options = {
+                                    //Boolean - Whether we should show a stroke on each segment
+                                    segmentShowStroke: true,
+
+                                    //String - The colour of each segment stroke
+                                    segmentStrokeColor: "#fff",
+
+                                    //Number - The width of each segment stroke
+                                    segmentStrokeWidth: 2,
+
+                                    //Number - The percentage of the chart that we cut out of the middle
+                                    percentageInnerCutout: 50, // This is 0 for Pie charts
+
+                                    //Number - Amount of animation steps
+                                    animationSteps: 100,
+
+                                    //String - Animation easing effect
+                                    animationEasing: "easeOutBounce",
+
+                                    //Boolean - Whether we animate the rotation of the Doughnut
+                                    animateRotate: true,
+
+                                    //Boolean - Whether we animate scaling the Doughnut from the centre
+                                    animateScale: false,
+
+                                };
+                                myNewChart = new Chart(ct).Doughnut(chartData, options);
+                            </script>
+                        </div>
+
+	</body>
+</html>

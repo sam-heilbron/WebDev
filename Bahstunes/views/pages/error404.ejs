@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+  		<% include ../partials/header.ejs %>
+	</head>
+
+	<body>
+		Whoooops!!!
+		This page is not found.
+		<div class="container-fluid">
+			<div class="row center">It looks like someone in our Development team has made a mistake.</div>
+			<div class="row center">Select who to fire...</div>
+			<div class="row developers_cntnr">
+ 				<div class="col-md-3">
+   					<img class="img-responsive" src="/images/akshi.jpg" />
+   					<div class="center"><br><a name="akshi" class="btn btn-primary">Akshi</a></div>
+ 				</div>
+				<div class="col-md-3">
+   					<img class="img-responsive" src="/images/jack.jpg" />
+   					<div class="center"><br><a name="jack" class="btn btn-primary">Jack</a></div>
+ 				</div>
+ 				<div class="col-md-3">
+   					<img class="img-responsive" src="/images/sam.jpg" />
+   					<div class="center"><br><a name="sam" class="btn btn-primary">Sam</a></div>
+ 				</div>
+ 				<div class="col-md-3">
+   					<img class="img-responsive" src="/images/scott.jpg" />
+   					<div class="center"><br><a name="scott" class="btn btn-primary">Scott</a></div>
+ 				</div>
+ 				<script type="text/javascript">
+					$(".btn").click(function() {
+    					$.post("fire_developer", {name: this.name});
+					});
+ 				</script>
+			</div>
+			<br>
+			<div class="row center"> Or be merciful and <a href="/">return to the homepage</a></div>
+		</div>
+	</body>
+</html>
+
+
+
+

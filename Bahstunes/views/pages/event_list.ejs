@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+	<head>
+  		<% include ../partials/header.ejs %>
+	</head>
+
+	<body>
+		<% include ../partials/saving_popup.ejs %>
+		<% include ../partials/gmaps_search.ejs %>
+		<% include ../partials/navigation.ejs %>
+		<div id="content">
+			<table class="table table-hover table-border table-fixed">
+    			<thead>
+      				<tr class="usr">
+        				<th class="col-md-2">Performer</th>
+        				<th class="col-md-3">Location</th>
+        				<th class="col-md-2">Start Time</th>
+        				<% if(title == "My Events") { %>
+        					<th colspan="2"><a id="events_save_changes" class="save_changes btn btn-success disabled" onclick="SaveEventChanges('del')">Save Changes</a></th>
+        				<% } else { %>
+        					<th colspan="2"><a id="events_save_changes" class="save_changes btn btn-success disabled" onclick="SaveEventChanges('new')">Save Changes</a></th>
+        				<% } %>
+      				</tr>
+    			</thead>
+    			<tbody>
+   					<% events.forEach(function(e) { %>
+    				<tr class="usr">
+        				<td class="login"><%= e._performer %> </td>
+        				<td class="location"><%= e._location %></td>
+        				<td class="start_t"><%= new Date(e._start).toLocaleString() %> </td>
+        				<% if(title == "My Events") { %>
+        				<td class="attend_btn">
+        					<button type="button" class="btn btn-primary" data-_performer="<%= e._performer %>" 
+        							data-_location="<%= e._location %>" data-_start="<%= e._start %>" data-_end="<%= e._end %>" 
+        							data-_EventID ="<%= e._eventid %>"  data-_link ="<%= e._link %>">Remove</button>
+        				</td>
+        				<td class="view_map">
+        					<button type="button" class="btn btn-default" data-toggle="modal" data-target="#gmaps_search" data-destination="<%= e._location %>">View Map</button>
+        				</td>
+        				<% } else { %>
+        					<% if(alreadyAttendingYN(e, mine)) { %>
+        					<td class="attend_btn">
+        						<button disabled type="button" class="btn btn-success" data-_performer="<%= e._performer %>" data-_location="<%= e._location %>" 
+        							data-_start="<%= e._start %>" data-_end="<%= e._end %>" >Attending</button>
+        					</td>
+        					<% } else { %>
+        					<td class="attend_btn">
+        						<button type="button" class="btn btn-primary" data-_performer="<%= e._performer %>" data-_location="<%= e._location %>" 
+        							data-_start="<%= e._start %>" data-_end="<%= e._end %>" >Attend</button>
+        					</td>
+        					<% } %>
+        				<td class="view_map">
+        					<button type="button" class="btn btn-default" data-toggle="modal" data-target="#gmaps_search" data-destination="<%= e._location %>">View Map</button>
+        				</td>
+        				<% } %>
+        				
+        			</tr>
+    				<% }); %>
+    			</tbody>
+  			</table>
+		</div>
+	</body>
+</html>

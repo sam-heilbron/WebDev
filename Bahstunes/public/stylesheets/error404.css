@@ -1,0 +1,11 @@
+.row.developers_cntnr {
+	width:70%;
+  	margin-left:15%;
+  	margin-right:15%;
+}
+.col-md-4 img {
+	width: 100%;
+}
+.center {
+	text-align:center;
+}

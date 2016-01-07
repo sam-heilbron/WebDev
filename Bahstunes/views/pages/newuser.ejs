@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<% include ../partials/header.ejs %>
+    <link rel="shortcut icon" href="images/favicon.ico">
+</head><!--/head-->
+
+<body>
+
+<!--.preloader-->
+<div class="preloader"><i class="fa fa-circle-o-notch fa-spin"></i></div>
+<!--/.preloader-->
+
+<header id="header"> 
+    <div class="container">
+        <div class="container-inner">
+         	<div class="logo pull-left">
+                <a class="pull-left logo" href="index.html">
+                    <h1><a href="/auth/spotify"><button class="btn btn-lg btn-transparent">Log in Using Spotify</button></a></h1>
+                </a>
+            </div>
+            <div class="menu pull-right">
+                <a href="#" class="nav-button">
+                    <i class="fa fa-align-justify"></i> Menu
+                </a> 
+            </div>
+        </div>
+    </div>
+</header> <!--/#header-->
+
+<div id="navigation">
+    <div class="vertical-middle">
+        <div class="vertical-middle-inner">
+            <div class="main-nav">
+                <a id="hidemenu" href="#"><i class="fa fa-times-circle fa-2x"></i></a>
+                <ul>                     
+                    <li class="active"><a href="#" data-target="#page-slider" data-slide-to="0">Home</a></li>
+                    <li><a href="#" data-target="#page-slider" data-slide-to="1">About</a></li>
+                    <li><a href="#" data-target="#page-slider" data-slide-to="2">Features</a></li>                     
+                    <li><a href="#" data-target="#page-slider" data-slide-to="3">Developers</a></li> 
+                    <li><a href="#" data-target="#page-slider" data-slide-to="4">Contact</a></li>                  
+                </ul>
+            </div>
+        </div>
+    </div>
+</div><!--/#navigation-->
+
+<section id="welcome-page">
+
+    <div id="page-slider" class="carousel slide" data-interval="false">
+
+        <ol class="carousel-indicators visible-xs">
+            <li data-target="#page-slider" data-slide-to="0" class="active"></li>
+            <li data-target="#page-slider" data-slide-to="1"></li>
+            <li data-target="#page-slider" data-slide-to="2"></li>
+            <li data-target="#page-slider" data-slide-to="3"></li>
+            <li data-target="#page-slider" data-slide-to="4"></li>
+        </ol>
+
+        <a class="welcome-page-left hidden-xs" href="#page-slider" data-slide="prev"><i class="fa fa-chevron-left"></i></a>
+        <a class="welcome-page-right hidden-xs" href="#page-slider" data-slide="next"><i class="fa fa-chevron-right"></i></a>
+
+        <div class="carousel-inner">
+
+            <div id="home-page" class="item active">
+                <div class="container">
+                    <div class="vertical-middle">
+                        <div class="vertical-middle-inner">
+                            <div class="row">
+                                <div class="col-sm-6 col-md-push-6">
+                                    <div class="embed-responsive embed-responsive-16by9">
+                                       <img class="img-responsive" src="images/Boston-Harbor-&-Downtown.jpg" alt="logo">
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-md-pull-6">
+                                    <h2 class="heading">Bahstunes</h2>
+                                    <p class="lead">The premier resource to finding local artists playing near you </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div><!--/#home-page-->
+
+            <div id="about-page" class="item">
+                <div class="container">
+
+                    <div class="vertical-middle">
+                        <div class="vertical-middle-inner">
+
+                            <div class="text-center">
+                                <h2 class="page-header">About Us</h2>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-sm-4">
+                                    <div class="box">
+                                        <h3>Our Team</h3>
+                                        <p>We are four aspiring developers currently completing a Web Programming course at Tufts University</p>
+                                    </div>
+                                </div>
+                                <div class="col-sm-4">
+                                    <div class="box">
+                                        <h3>Our Mission</h3>
+                                        <p>Using your starred music playlist, we recommend various local unknown artists which you might enjoy. </p>
+                                    </div>
+                                </div>
+                                <div class="col-sm-4">
+                                    <div class="box">
+                                        <h3>Our Vision</h3>
+                                        <p>There are so many talented artists and performers that go unnoticed due to lack of publicity. We hope to link small, talented artists with users </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>              
+            </div><!--/#about-page-->
+
+             <div id="features-page" class="item">
+                <div class="container">
+
+                    <div class="vertical-middle">
+                        <div class="vertical-middle-inner">
+
+                            <div class="text-center">
+                                <h2 class="page-header">Our Features</h2>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-sm-4">
+                                    <div class="box">
+                                        <h3>Local Events </h3>
+                                        <p>See a full list of upcoming performances in venues close to you</p>
+                                    </div>
+                                </div>
+                                <div class="col-sm-4">
+                                    <div class="box">
+                                        <h3>Seamless Integration with your Google Account</h3>
+                                        <p>Get directions to venues, add events to your calendars with just one click. </p>
+                                    </div>
+                                </div>
+                                <div class="col-sm-4">
+                                    <div class="box">
+                                        <h3> Music Preference Analytics</h3>
+                                        <p>View a breakdown of the genres most frequently found on you Starred playlist. </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>              
+            </div><!--/#features-page-->
+
+            <div id="developer-page" class="item">
+                <div class="container">
+
+                    <div class="vertical-middle">
+                        <div class="vertical-middle-inner">
+
+                            <div class="text-center">
+                                <h2 class="page-header">Our Developers</h2>
+                            </div>
+
+                            <div class="row">
+
+                                <div class="col-sm-3">
+                                    <div class="overlay-container">
+                                        <img class="img-responsive" src="images/akshi.jpg" alt="">
+                                        <div class="overlay">
+                                            <div class="vertical-middle">
+                                                <div class="vertical-middle-inner">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-3">
+                                    <div class="overlay-container">
+                                        <img class="img-responsive" src="images/scott.jpg" alt="">
+                                        <div class="overlay">
+                                            <div class="vertical-middle">
+                                                <div class="vertical-middle-inner">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                 <div class="col-sm-3">
+                                    <div class="overlay-container">
+                                        <img class="img-responsive" src="images/sam.jpg" alt="">
+                                        <div class="overlay">
+                                            <div class="vertical-middle">
+                                                <div class="vertical-middle-inner">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                  </div>
+                                <div class="col-sm-3">
+                                    <div class="overlay-container">
+                                        <img class="img-responsive" src="images/jack.jpg" alt="">
+                                        <div class="overlay">
+                                            <div class="vertical-middle">
+                                                <div class="vertical-middle-inner">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                 </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>                
+            </div><!--/#developer-page-->
+
+            <div id="contact-page" class="item">
+                <div class="container">
+
+                    <div class="vertical-middle">
+                        <div class="vertical-middle-inner">
+
+                            <div class="text-center">
+                                <h2 class="page-header">Contact Us</h2>
+                            </div>
+
+                            <form class="form-horizontal" id="contact-form" role="form">
+                                <div class="form-group form-status">
+                                    <div class="col-sm-offset-2 col-sm-6">
+                                        <div class="form-status-content">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-sm-offset-2 col-sm-6">
+                                        <input type="text" name="name" class="form-control input-lg" placeholder="Name" required="required">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-sm-offset-2 col-sm-6">
+                                        <input type="email" name="email" class="form-control input-lg" placeholder="Email" required="required">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-sm-offset-2 col-sm-6">
+                                        <input type="text" name="subject" class="form-control input-lg" placeholder="Subject" required="required">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-sm-offset-2 col-sm-8">
+                                        <textarea name="message" rows="6" class="form-control input-lg" placeholder="Message" required="required"></textarea>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-sm-offset-2 col-sm-8">
+                                        <button type="submit" class="btn btn-lg btn-transparent" onsubmit = "homeformsubmit()">Send Message</button>
+                                    </div>
+                                </div>
+                            </form>
+
+                        </div>
+                    </div>
+
+                </div>                
+            </div><!--/#contact-page-->
+        </div><!--/.carousel-inner-->
+    </div>
+</section>
+
+<footer id="footer" class="text-center">
+    <a target="_blank" href="#" title="Free Twitter Bootstrap WordPress Themes and HTML templates">Bahstunes</a>
+</footer>
+
+</body>
+</html>
+

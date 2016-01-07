@@ -1,0 +1,132 @@
+<div class="modal level1" id="myModal_newuser">
+	<div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+          <h4 class="modal-title">Getting Started</h4>
+        </div><div class="container"></div>
+        <div class="modal-body">
+        	<div class = "center">
+			<span>It looks like you're new to the site! Follow the steps below to get started.</span>
+        	<br>
+          	<span class="bold">Step 1: </span><br><a data-toggle="modal" href="#myModal_slideshow" class="btn btn-primary">View Website Features</a>
+          	<br>
+          	<br>
+          	<% if(authUrl == "") { %>
+          	<span class="bold">Complete! </span><br><a id="authorize-button" class="btn btn-primary" disabled>Sync with Google Account</a>
+          	<% } else { %>
+          	<span class="bold">Step 2: </span><br><a id="authorize-button" class="btn btn-primary" href="<%= authUrl %>">Sync with Google Account</a>
+          	<% } %>
+          	<br>
+          	<br>
+          	<span class="bold">Step 3: </span><br><a data-toggle="modal" href="#myModal_mymusic" class="btn btn-primary">Link Music Accounts</a>
+          	<br>
+          	<br>
+          	<span class="bold">Step 4: </span><br><a data-dismiss="modal"  class="btn btn-primary">Visit the Site</a>
+          	<br>
+          	</div>
+        </div>
+        <div class="modal-footer">
+          <a href="#" class="btn btn-primary" data-dismiss="modal">DONE</a>
+        </div>
+      </div>
+    </div>
+</div>
+
+
+<!---------------------------------------SLIDESHOW MODAL ----------------------------------------------------------->
+<div class="modal level2" id="myModal_slideshow" data-backdrop="static">
+	<div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+          <h4 class="modal-title">Website Features</h4>
+        </div><div class="container"></div>
+        <div class="modal-body">
+          <div class="slideshow_container">
+  					<br>
+  					<div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="false">
+    				<!-- Indicators -->
+    					<ol class="carousel-indicators">
+      						<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      						<li data-target="#myCarousel" data-slide-to="1"></li>
+      						<li data-target="#myCarousel" data-slide-to="2"></li>
+      						<li data-target="#myCarousel" data-slide-to="3"></li>
+    					</ol>
+
+    				<!-- Wrapper for slides -->
+    				<div class="carousel-inner" role="listbox">
+      					<div class="item active">
+      						<h4 class="slide-caption"> This is responsive slide </h4>
+        					<img src="images/features_modal/intro_responsive.jpg" alt="responsive" width="460" height="345">
+      					</div>
+	 			    	<div class="item">
+	 			    		<h4 class="slide-caption"> Accumulate all your music library information in one place </h4>
+        					<img src="images/features_modal/intro_socialmedia.jpg" alt="socialmedia" width="460" height="345">
+      					</div>
+      					<div class="item">
+      						<h4 class="slide-caption"> Analyze your recent music preferences </h4>
+        					<img src="images/features_modal/intro_musicpreferences.png" alt="musicpreferences" width="460" height="345">
+      					</div>
+      					<div class="item">
+      						<h4 class="slide-caption"> Find bands are artists that are playing near you </h4>
+        					<img src="images/features_modal/intro_bandsnearby.jpg" alt="bands" width="460" height="345">
+      					</div>
+    				</div>
+	
+    				<!-- Left and right controls -->
+    				<a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+      					<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      					<span class="sr-only">Previous</span>
+    				</a>
+    				<a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+      					<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      					<span class="sr-only">Next</span>
+    				</a>
+  				</div>
+				</div>
+        </div>
+        <div class="modal-footer">
+          <a href="#" data-dismiss="modal" class="btn">Close</a>
+        </div>
+      </div>
+    </div>
+</div>
+<!----------------------------END -------- Second modal ------------------------------------>
+
+<!----------------------------mymusic MODAL  ------------------------------------>
+
+<div class="modal level2" id="myModal_mymusic">
+	<div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+          <h4 class="modal-title">Link Music Accounts</h4>
+        </div><div class="container"></div>
+        <div class="modal-body">
+			Please select which applications you would like linked to your account. <br>
+			(Note: You will have a chance to edit this later).
+				
+			<form role="form">
+    			<div class="checkbox">
+      				<label><input type="checkbox" value="">Spotify</label>
+    			</div>
+    			<div class="checkbox">
+      				<label><input type="checkbox" value="">iTunes</label>
+    			</div>
+    			<div class="checkbox">
+      				<label><input type="checkbox" value="">Google Play</label>
+    			</div>
+    			<div class="checkbox">
+      				<label><input type="checkbox" value="">Soundcloud</label>
+    			</div>
+    			<a id="music_submit" data-dismiss="modal" class="btn btn-primary">Submit</a>
+			</form>
+
+        </div>
+        <div class="modal-footer">
+          <a href="#" data-dismiss="modal" class="btn">Close</a>
+        </div>
+      </div>
+    </div>
+</div>
